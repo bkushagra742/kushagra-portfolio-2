@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink-950: #0a0a0a;
+  --ink-900: #121212;
+  --ink-800: #181818;
+  --ink-700: #232323;
+  --cream: #ede8de;
+  --cream-dim: rgba(237, 232, 222, 0.3);
+  --cream-faint: rgba(237, 232, 222, 0.12);
+  --line: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink-950);
+  color: var(--cream);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+code, pre, .mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--cream-dim);
+  border-radius: 2px;
+}
+
+::selection {
+  background: rgba(237, 232, 222, 0.2);
+  color: #fff;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--line);
+}
+
+.text-cream-full {
+  color: var(--cream);
+}
+
+.text-cream-dim {
+  color: var(--cream-dim);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3a3a3a, #1a1a1a);
+  color: var(--cream);
+  border: 1px solid var(--cream-dim);
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 0.3px;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(237, 232, 222, 0.12);
+  border-color: rgba(237, 232, 222, 0.5);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--cream-dim);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-outline:hover {
+  border-color: var(--cream-dim);
+  color: var(--cream);
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: 100px 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--cream-dim);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--cream);
+}
+.section-sub {
+  color: rgba(237, 232, 222, 0.55);
+  font-size: 16px;
+  max-width: 540px;
+  line-height: 1.7;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 500;
+  background: var(--cream-faint);
+  color: var(--cream-dim);
+  border: 1px solid rgba(237, 232, 222, 0.15);
+}
+.card {
+  background: var(--ink-800);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+.card:hover {
+  border-color: rgba(237, 232, 222, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes pulseSoft {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(237, 232, 222, 0.08); }
+  50% { box-shadow: 0 0 34px rgba(237, 232, 222, 0.2); }
+}
+
+.fade-up { animation: fadeUp 0.7s ease forwards; }
+.float { animation: float 4s ease-in-out infinite; }
+
+@media (max-width: 768px) {
+  .section { padding: 70px 0; }
+  .section-title { font-size: 28px; }
+}
