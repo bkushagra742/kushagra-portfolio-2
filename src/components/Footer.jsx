@@ -63,7 +63,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-6 flex justify-between items-center flex-wrap gap-3" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
-          <span className="text-[13px] text-cream-dim opacity-50">© 2026 Kushagra Nexus. All rights reserved.</span>
+          <span className="text-[13px] text-cream-dim opacity-50">© 2026 Kushagra. All rights reserved.</span>
           <span className="font-mono text-[11px] text-cream-dim opacity-40">v2.0.0 · React + Vite</span>
         </div>
       </div>
