@@ -10,22 +10,29 @@ export default function Contact() {
   const handleChange = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
   const handleSubmit = async () => {
-    if (!form.name || !form.email || !form.message) return;
-    setStatus("sending");
-    try {
-      // Wire this up to your own form backend (e.g. Formspree, a Netlify
-      // Function, or EmailJS). Placeholder call shown below.
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (!res.ok) throw new Error("Failed to send");
-      setStatus("sent");
-    } catch (err) {
-      setStatus("error");
-    }
-  };
+  if (!form.name || !form.email || !form.message) return;
+  setStatus("sending");
+  try {
+    // FormSubmit.co — no backend, no API key. First-ever submission
+    // triggers a one-time confirmation email to profile.email; click
+    // "Activate" there once and it works silently after that.
+    const res = await fetch(`https://formsubmit.co/ajax/${profile.email}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        subject: form.subject || "New portfolio contact form message",
+        message: form.message,
+        _subject: `Portfolio contact: ${form.subject || "New message"}`,
+      }),
+    });
+    if (!res.ok) throw new Error("Failed to send");
+    setStatus("sent");
+  } catch (err) {
+    setStatus("error");
+  }
+};
 
   const inputStyle = {
     width: "100%",
