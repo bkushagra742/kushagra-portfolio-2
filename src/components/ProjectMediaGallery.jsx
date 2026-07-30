@@ -17,17 +17,15 @@ export default function ProjectMediaGallery({ slug }) {
   const hasAny = videos.length + bts.length + code.length > 0;
 
   if (!hasAny) {
-    return (
-      <div
-        className="rounded-xl p-6 text-center text-xs font-mono text-cream-dim opacity-50"
-        style={{ border: "1px dashed rgba(255,255,255,0.15)" }}
-      >
-        No media uploaded yet for this project. Drop files into
-        <br />
-        <code className="opacity-80">src/assets/projects/{slug}/{"{video,bts,code}"}</code>
-      </div>
-    );
-  }
+  return (
+    <div
+      className="rounded-xl p-6 text-center text-xs font-mono text-cream-dim opacity-50"
+      style={{ border: "1px dashed rgba(255,255,255,0.15)" }}
+    >
+      No media added yet for this project — check back soon.
+    </div>
+  );
+}
 
   return (
     <div className="space-y-6">
