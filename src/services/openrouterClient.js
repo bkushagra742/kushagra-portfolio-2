@@ -19,12 +19,12 @@ import { buildKnowledgeBaseText } from "../data/knowledgeLoader";
 // limited (HTTP 429). Check https://openrouter.ai/models?max_price=0 for
 // the current live list if ALL of these ever stop working at once.
 const MODEL_CANDIDATES = [
-  "nvidia/nemotron-3-super-120b-a12b:free",
   "meta-llama/llama-3.2-3b-instruct:free",
   "google/gemma-2-9b-it:free",
   "mistralai/mistral-7b-instruct:free",
   "qwen/qwen-2.5-7b-instruct:free",
   "meta-llama/llama-3.3-70b-instruct:free",
+  "nvidia/nemotron-3-super-120b-a12b:free",
 ];
 const API_KEY = import.meta.env.VITE_OPENROUTER_API_KEY;
 
