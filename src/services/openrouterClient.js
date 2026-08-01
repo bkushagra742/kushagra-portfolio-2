@@ -72,6 +72,7 @@ export async function askKanuu(messages, liveContext) {
           messages: chatMessages,
           temperature: 0.6,
           max_tokens: 400,
+          reasoning: { exclude: true },
         }),
       });
 
