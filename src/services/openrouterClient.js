@@ -98,8 +98,10 @@ export async function askKanuu(messages, liveContext) {
       }
 
       const data = await res.json();
-      const reply = data?.choices?.[0]?.message?.content;
-      return reply || "Sorry, I couldn't come up with a response to that — try rephrasing?";
+      let reply = data?.choices?.[0]?.message?.content || "";
+reply = reply.replace(/<think>[\s\S]*?<\/think>/gi, "").trim();
+reply = reply.replace(/<thinking>[\s\S]*?<\/thinking>/gi, "").trim();
+return reply || "Sorry, I couldn't come up with a response to that — try rephrasing?";
     } catch (err) {
       if (err.message?.startsWith("Kanuu's AI service failed")) throw err; // non-retryable, propagate
       lastError = err; // network error or similar — try next candidate
