@@ -9,7 +9,7 @@ export const socials = [
   { label: "Dev.to", handle: "bkushagra742", url: "https://dev.to/bkushagra742" },
   { label: "Hashnode", handle: "bkushagra742.hashnode.dev", url: "https://bkushagra742.hashnode.dev" },
   { label: "Twitter / X", handle: "@bkushagra742", url: "https://x.com/bkushagra742" },
-  { label: "Instagram", handle: "@isotnt", url: "https://instagram.com/isotnt" },
+  { label: "Instagram", handle: "@bkushagra742", url: "https://instagram.com/bkushagra742" },
   { label: "Threads", handle: "@bkushagra742", url: "https://threads.net/@bkushagra742" },
   { label: "YouTube", handle: "@bkushagra742", url: "https://youtube.com/@bkushagra742" },
   { label: "Discord", handle: "bkushagra742", url: null },
