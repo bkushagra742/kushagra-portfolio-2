@@ -70,9 +70,9 @@ The website reflects Kushagra's development philosophy of combining clean design
 
 ---
 
-# Kanuu AI
+# KrishnaAI
 
-To make the portfolio more interactive, Kushagra developed Kanuu, an AI assistant integrated directly into the website.
+To make the portfolio more interactive, Kushagra developed KrishnaAI, an AI assistant integrated directly into the website.
 
 Kanuu helps visitors:
 
