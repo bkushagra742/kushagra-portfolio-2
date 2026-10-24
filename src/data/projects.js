@@ -87,6 +87,18 @@ export const projects = [
     github: "https://github.com/bkushagra742/bkushagra742",
     demo: null,
   },
+ {
+    slug: "kloud",
+    name: "KLOUD  Grok Style Avatar ",
+    subtitle: "Avatar Creator",
+    description:
+      "A tiny, expressive avatar you shape, colour and export - built around one rule: only two eyes, no mouth. Everything it can express, it expresses through where those two eyes sit, how they're shaped, and how the head is tilted.",
+    tech: ["React", "Vite", "Tailwind CSS", "After Motion", "JavaScript"],
+    category: "Web Development",
+    status: "Completed ",
+    github: "https://github.com/bkushagra742/Kloud",
+    demo: "kloud-psi.vercel.app",
+  },
 ];
 
 export const projectCategories = [
