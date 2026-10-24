@@ -3,7 +3,7 @@
 // folder and it's automatically included — no code changes needed.
 //
 // Files are ordered deliberately (identity + system_rules first, since they
-// define Kanuu's behavior and should anchor the prompt) rather than
+// define KrishnaAI's behavior and should anchor the prompt) rather than
 // alphabetically.
 
 const modules = import.meta.glob("/src/data/knowledge/*.md", { eager: true, query: "?raw", import: "default" });
