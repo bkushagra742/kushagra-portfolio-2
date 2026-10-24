@@ -12,7 +12,7 @@ function isWeatherQuestion(text) {
 
 export default function Kanuu({ open, onOpen, onClose }) {
   const [messages, setMessages] = useState([
-    { role: "assistant", text: "Hey! I'm Kanuu, Kushagra's AI assistant. Ask me anything about his projects, skills, experience, or how to get in touch." },
+    { role: "assistant", text: "Hey! I'm KrishnaAI, Kushagra's AI assistant. Ask me anything about his projects, skills, experience, or how to get in touch." },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -71,7 +71,7 @@ export default function Kanuu({ open, onOpen, onClose }) {
       {!open && (
         <button
           onClick={onOpen}
-          title="Ask Kanuu"
+          title="Ask Krishna AI"
           className="fixed bottom-7 right-7 z-[500] w-16 h-16 rounded-2xl flex items-center justify-center animate-glowPulse"
           style={{ background: "var(--ink-800)", border: "1px solid rgba(237,232,222,0.3)", overflow: "hidden" }}
         >
@@ -100,7 +100,7 @@ export default function Kanuu({ open, onOpen, onClose }) {
               <img src={kanuuAvatar} alt="Kanuu" className="w-full h-full object-cover grayscale" />
             </div>
             <div className="flex-1">
-              <div className="font-display font-bold text-sm text-cream-full">Kanuu</div>
+              <div className="font-display font-bold text-sm text-cream-full">KrishnaAI</div>
               <div className="text-[11px] text-cream-dim opacity-50">Kushagra's AI Assistant</div>
             </div>
             <button onClick={onClose} className="text-cream-dim opacity-60 hover:opacity-100 text-lg leading-none">
