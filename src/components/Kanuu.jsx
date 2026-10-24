@@ -127,7 +127,7 @@ export default function Kanuu({ open, onOpen, onClose }) {
             {loading && (
               <div className="flex justify-start">
                 <div className="px-3.5 py-2.5 rounded-xl text-[13px] text-cream-dim opacity-50" style={{ background: "var(--ink-700)" }}>
-                  Kanuu is typing…
+                  KrishnaAI is typing…
                 </div>
               </div>
             )}
